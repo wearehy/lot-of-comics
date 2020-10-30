@@ -1,0 +1,800 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19801",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "95680",
+      "name": "pay",
+      "font_class": "pay",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "190842",
+      "name": "admin",
+      "font_class": "admin",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "202080",
+      "name": "feedback ",
+      "font_class": "feedback",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "358318",
+      "name": "insurance",
+      "font_class": "insurance",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "411148",
+      "name": "Recommend friends",
+      "font_class": "recommendfriends",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "435993",
+      "name": "set",
+      "font_class": "set",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "535501",
+      "name": "file_Muisc",
+      "font_class": "filemuisc",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
+      "icon_id": "711106",
+      "name": "menu",
+      "font_class": "menu",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "718053",
+      "name": "heart",
+      "font_class": "heart",
+      "unicode": "ec79",
+      "unicode_decimal": 60537
+    },
+    {
+      "icon_id": "891649",
+      "name": "classify",
+      "font_class": "classify",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "1058072",
+      "name": "pregnant",
+      "font_class": "yunmabibei",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "1097371",
+      "name": "woman",
+      "font_class": "woman",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "1471597",
+      "name": "set",
+      "font_class": "set1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "1473710",
+      "name": "recommend",
+      "font_class": "xiangguantuijian",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1555083",
+      "name": "collect",
+      "font_class": "collect",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "1881629",
+      "name": "classify",
+      "font_class": "classify1",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "1891607",
+      "name": "baby",
+      "font_class": "baby",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "1993119",
+      "name": "pay",
+      "font_class": "pay1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "2049316",
+      "name": "shopping",
+      "font_class": "uicon_shopping",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "2082661",
+      "name": "pay",
+      "font_class": "pay2",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "2174410",
+      "name": "shopping-cart",
+      "font_class": "shopping-cart",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "2174412",
+      "name": "shopping-wicket",
+      "font_class": "shopping-wicket",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "2278441",
+      "name": "menu_Phone Management",
+      "font_class": "PhoneManagement",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "2299606",
+      "name": "total",
+      "font_class": "total",
+      "unicode": "e723",
+      "unicode_decimal": 59171
+    },
+    {
+      "icon_id": "2937026",
+      "name": "ico-pregnant",
+      "font_class": "ico-pregnant",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "3295291",
+      "name": "page_home_left_icon_",
+      "font_class": "page_home_left_icon_",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "3325954",
+      "name": "admin",
+      "font_class": "admin1",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "3380715",
+      "name": "insurance services m",
+      "font_class": "insuranceservicesm",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "3496650",
+      "name": "role",
+      "font_class": "role",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "3531772",
+      "name": "classfiys",
+      "font_class": "classfiys",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "3738728",
+      "name": "set",
+      "font_class": "set2",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "3770176",
+      "name": "Total",
+      "font_class": "Total",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "3847403",
+      "name": "image_homepage_home_",
+      "font_class": "image_homepage_home_",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "3886908",
+      "name": "user management",
+      "font_class": "set3",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3924479",
+      "name": "woman",
+      "font_class": "woman1",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "4098496",
+      "name": "role",
+      "font_class": "jiaoseguanli",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "4108563",
+      "name": "Woman",
+      "font_class": "Woman",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "4429917",
+      "name": "total",
+      "font_class": "total1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "4539046",
+      "name": "system",
+      "font_class": "system",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "4616435",
+      "name": "child",
+      "font_class": "child",
+      "unicode": "e78d",
+      "unicode_decimal": 59277
+    },
+    {
+      "icon_id": "4902200",
+      "name": "equipment",
+      "font_class": "equipment",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "4903466",
+      "name": "goods",
+      "font_class": "goods",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "5004600",
+      "name": "classfiy",
+      "font_class": "fenlei",
+      "unicode": "e6eb",
+      "unicode_decimal": 59115
+    },
+    {
+      "icon_id": "5018562",
+      "name": "jurisdiction",
+      "font_class": "jurisdiction",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "5265972",
+      "name": "pregnant-01",
+      "font_class": "pregnant-",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "5265974",
+      "name": "pregnant-first",
+      "font_class": "pregnant-first",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "5365265",
+      "name": "banner",
+      "font_class": "banner",
+      "unicode": "e963",
+      "unicode_decimal": 59747
+    },
+    {
+      "icon_id": "5432740",
+      "name": "collect 2 ",
+      "font_class": "collect1",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "5769542",
+      "name": "collect",
+      "font_class": "collect2",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "5996034",
+      "name": "Entrust management",
+      "font_class": "Entrustmanagement",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "6089514",
+      "name": "page_home_left_icon_",
+      "font_class": "page_home_left_icon_1",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "6158531",
+      "name": "tico-muisc-b",
+      "font_class": "tico-muisc-b",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "6582163",
+      "name": "system state",
+      "font_class": "systemstate",
+      "unicode": "e712",
+      "unicode_decimal": 59154
+    },
+    {
+      "icon_id": "6663557",
+      "name": "ic library music 24p",
+      "font_class": "iclibrarymusicp",
+      "unicode": "ed35",
+      "unicode_decimal": 60725
+    },
+    {
+      "icon_id": "6697044",
+      "name": "admin",
+      "font_class": "admin2",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "6926689",
+      "name": "Total shop visits",
+      "font_class": "Totalshopvisits",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "7079009",
+      "name": "goods",
+      "font_class": "ziyuan",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7097869",
+      "name": "feed_back",
+      "font_class": "test",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7189393",
+      "name": "week",
+      "font_class": "icon-test",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7213733",
+      "name": "Muisc",
+      "font_class": "Muisc",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "7260288",
+      "name": "recommend",
+      "font_class": "recommend",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "7428744",
+      "name": "alipay",
+      "font_class": "ziyuan1",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "7571015",
+      "name": "Set up-p",
+      "font_class": "Setup-p",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7706350",
+      "name": "goods",
+      "font_class": "goods1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7756850",
+      "name": "online shopping.1",
+      "font_class": "onlineshopping",
+      "unicode": "ebc8",
+      "unicode_decimal": 60360
+    },
+    {
+      "icon_id": "7863739",
+      "name": "pay",
+      "font_class": "pay3",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    },
+    {
+      "icon_id": "7959883",
+      "name": "System",
+      "font_class": "System",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "8048664",
+      "name": " _Order Detail",
+      "font_class": "_OrderDetail",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "8079157",
+      "name": "pay",
+      "font_class": "pay4",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "8121052",
+      "name": "recommend/selected",
+      "font_class": "xinpinzhuangtai",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "8136382",
+      "name": "pay",
+      "font_class": "pay5",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "8589512",
+      "name": "admin",
+      "font_class": "admin3",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "8905120",
+      "name": "2742770 - browser internet online shopping web web",
+      "font_class": "-browserinternetonlineshoppingwebweb",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "8917173",
+      "name": "menu_Indicator management",
+      "font_class": "menu_Indicatormanagement",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
+      "icon_id": "8968258",
+      "name": "jurisdiction",
+      "font_class": "jurisdiction1",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "9014256",
+      "name": "system",
+      "font_class": "system1",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "9114862",
+      "name": "Total mumber of verifie",
+      "font_class": "Totalmumberofverifie",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "9114863",
+      "name": "Total pledge",
+      "font_class": "Totalpledge",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "9192784",
+      "name": "Banner",
+      "font_class": "Group",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "9203322",
+      "name": "Order Detail",
+      "font_class": "Group1",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "9487465",
+      "name": "system",
+      "font_class": "system2",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "9684413",
+      "name": "set",
+      "font_class": "set4",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "9737576",
+      "name": "set",
+      "font_class": "set5",
+      "unicode": "e7fc",
+      "unicode_decimal": 59388
+    },
+    {
+      "icon_id": "10214308",
+      "name": "teCRM SYSTEM",
+      "font_class": "teCRMSYSTEM",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "10594031",
+      "name": "admin",
+      "font_class": "admin4",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "10652778",
+      "name": "Insurance company",
+      "font_class": "Insurancecompany",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "10818297",
+      "name": "Member management",
+      "font_class": "Membermanagement",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "10902204",
+      "name": "role",
+      "font_class": "role1",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "10935217",
+      "name": "system",
+      "font_class": "Layers",
+      "unicode": "e504",
+      "unicode_decimal": 58628
+    },
+    {
+      "icon_id": "11173694",
+      "name": "Shopping Info.1",
+      "font_class": "ShoppingInfo",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "11236291",
+      "name": "feedback",
+      "font_class": "feedback1",
+      "unicode": "eb70",
+      "unicode_decimal": 60272
+    },
+    {
+      "icon_id": "11266263",
+      "name": "child",
+      "font_class": "child1",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "11488563",
+      "name": "Jurisdiction",
+      "font_class": "Jurisdiction",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "11677263",
+      "name": "role",
+      "font_class": "role2",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "11981752",
+      "name": "insurance",
+      "font_class": "insurance1",
+      "unicode": "e977",
+      "unicode_decimal": 59767
+    },
+    {
+      "icon_id": "12248184",
+      "name": "admin",
+      "font_class": "admin5",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "12519392",
+      "name": "child 儿童",
+      "font_class": "child2",
+      "unicode": "e564",
+      "unicode_decimal": 58724
+    },
+    {
+      "icon_id": "12628576",
+      "name": "goods",
+      "font_class": "goods2",
+      "unicode": "e537",
+      "unicode_decimal": 58679
+    },
+    {
+      "icon_id": "13126691",
+      "name": "collect charge",
+      "font_class": "collectcharge",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "13363574",
+      "name": "set",
+      "font_class": "set6",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "13562859",
+      "name": "goods",
+      "font_class": "goods3",
+      "unicode": "e53b",
+      "unicode_decimal": 58683
+    },
+    {
+      "icon_id": "13699131",
+      "name": " pay",
+      "font_class": "FontAwesomeamazonpay",
+      "unicode": "e995",
+      "unicode_decimal": 59797
+    },
+    {
+      "icon_id": "13715023",
+      "name": "icomoon file music",
+      "font_class": "icomoonfilemusic",
+      "unicode": "eec1",
+      "unicode_decimal": 61121
+    },
+    {
+      "icon_id": "13831389",
+      "name": "baby",
+      "font_class": "baby1",
+      "unicode": "ee35",
+      "unicode_decimal": 60981
+    },
+    {
+      "icon_id": "14111081",
+      "name": "baby",
+      "font_class": "baby2",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "14329522",
+      "name": "feed-back",
+      "font_class": "feed-back",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "14355540",
+      "name": "classfiy",
+      "font_class": "biaoqianlantubiao-08",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "14363091",
+      "name": "goods",
+      "font_class": "goods4",
+      "unicode": "e50a",
+      "unicode_decimal": 58634
+    },
+    {
+      "icon_id": "14411111",
+      "name": "system",
+      "font_class": "system3",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "14500684",
+      "name": "admin",
+      "font_class": "admin6",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "14558060",
+      "name": "menu - Event management",
+      "font_class": "menu-Eventmanagement",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "14644318",
+      "name": "goods",
+      "font_class": "shangpintu2",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}
