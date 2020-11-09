@@ -214,7 +214,7 @@
           ></el-input-number>
         </template>
       </el-table-column>
-      <el-table-column prop="playNum" label="播放量" sortable />
+      <el-table-column prop="play_num" label="播放量" sortable />
       <el-table-column prop="display" label="状态" sortable>
         <template slot-scope="scope">
           <el-switch
