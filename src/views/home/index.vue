@@ -1,22 +1,22 @@
 <template>
       <el-card>
-          <el-tag type="info">网站域名：{{ sysinfos.url }}</el-tag>
+          <el-tag type="info">网站域名：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">网站目录：{{ sysinfos.document_root }}</el-tag>
+          <el-tag type="info">网站目录：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">服务器操作系统：{{ sysinfos.server_os }}</el-tag>
+          <el-tag type="info">服务器操作系统：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">服务器端口：{{ sysinfos.server_port }}</el-tag>
+          <el-tag type="info">服务器端口：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">服务器IP：{{ sysinfos.server_ip }}</el-tag>
+          <el-tag type="info">服务器IP：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">WEB运行环境：{{ sysinfos.server_soft }}</el-tag>
+          <el-tag type="info">WEB运行环境：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">MySQL数据库版本：{{ sysinfos.mysql_version }}</el-tag>
+          <el-tag type="info">MySQL数据库版本：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">运行PHP版本：{{ sysinfos.php_version }}</el-tag>
+          <el-tag type="info">运行PHP版本：{{ xx }}</el-tag>
           <el-divider></el-divider>
-          <el-tag type="info">最大上传限制：{{ sysinfos.max_upload_size }}</el-tag>
+          <el-tag type="info">最大上传限制：{{ xx }}</el-tag>
       </el-card>
 </template>
 
@@ -26,11 +26,12 @@ import { getSystemInfo } from "@/api/system/system";
 export default {
   data() {
     return {
+      xx: 'xxxxxx',
       sysinfos: {}
     };
   },
   mounted() {
-    this.getSystemInfo();
+    // this.getSystemInfo();
   },
   destroyed() {
     window.onresize = null;

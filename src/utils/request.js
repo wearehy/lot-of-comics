@@ -1,9 +1,17 @@
 import axios from 'axios'
 import router from '@/router/routers'
-import { Notification, MessageBox } from 'element-ui'
+import {
+  Notification,
+  MessageBox
+} from 'element-ui'
 import store from '../store'
-import { getToken } from '@/utils/auth'
+import {
+  getToken
+} from '@/utils/auth'
 import Config from '@/settings'
+import {
+  codelock
+} from '@/utils/codeLock'
 
 // 创建axios实例
 const service = axios.create({
@@ -14,6 +22,12 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(
   config => {
+   
+    let cl = codelock(config);  //头部验证
+    config.headers['version'] = cl.version;
+    config.headers['timestamp'] = cl.timestamp;
+    config.headers['sign'] = cl.sign;
+    
     if (getToken()) {
       config.headers['Authorization'] = getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
     }
@@ -38,29 +52,30 @@ service.interceptors.response.use(
       return Promise.reject('error')
     } else {
       const res = response.data
-      if ( res.code ==201 || res.code == 400 || res.code == 5001 ) { //后端返回的自定义错误
+      if (res.code == 201 || res.code == 400 || res.code == 5001) { //后端返回的自定义错误
         Notification.error({
           title: res.message,
           duration: 5000
         })
         return Promise.reject(res.message)
-      } else if(res.code == 401) { //token失效
+      } else if (res.code == 401) { //token失效
         MessageBox.confirm(
           '登录状态已过期，您可以继续留在该页面，或者重新登录',
-          '系统提示',
-          {
+          '系统提示', {
             confirmButtonText: '重新登录',
             cancelButtonText: '取消',
             type: 'warning'
           }
         ).then(() => {
-            store.dispatch('LogOut').then(() => {
-              location.reload() // 为了重新实例化vue-router对象 避免bug
-            })
+          store.dispatch('LogOut').then(() => {
+            location.reload() // 为了重新实例化vue-router对象 避免bug
+          })
         })
-        
-      }else if(res.code == 403){
-        router.push({ path: '/401' }) //forbidden 无权限
+
+      } else if (res.code == 403) {
+        router.push({
+          path: '/401'
+        }) //forbidden 无权限
       } else {
         return res.data
       }
@@ -80,7 +95,7 @@ service.interceptors.response.use(
       }
     }
     if (code) {
-      
+
       const errorMsg = error.response.data.message
       if (errorMsg !== undefined) {
         Notification.error({
@@ -88,7 +103,7 @@ service.interceptors.response.use(
           duration: 5000
         })
       }
-      
+
     } else {
       Notification.error({
         title: '网络请求异常',

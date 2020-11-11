@@ -9,7 +9,7 @@ export function getMenusTree() {
 
 export function buildMenus() {
   return request({
-    url: '/menus/build',
+    url: '/admin/sec/permission/tree',
     method: 'get'
   })
 }

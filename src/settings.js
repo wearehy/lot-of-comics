@@ -2,7 +2,7 @@ module.exports = {
     /**
      * @description 网站标题
      */
-    title: '豹造孕育',
+    title: '漫画多多',
     /**
      * @description 是否显示 tagsView
      */

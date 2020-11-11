@@ -10,7 +10,7 @@ export function getSystemInfo() {
 
 export function config() {
   return request({
-    url: '/system/config',
+    url: '/config-admin/basics',
     method: 'get'
   })
 }

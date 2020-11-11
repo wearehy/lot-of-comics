@@ -172,7 +172,7 @@ export default {
 
               // setTimeout(() => {
                 this.$router.push({ path: "/" });
-                location.reload();
+                // location.reload();
               // }, 5000);
             })
             .catch((e) => {
