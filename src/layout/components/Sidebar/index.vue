@@ -32,14 +32,15 @@ import variables from "@/assets/styles/variables.scss";
 export default {
   components: { SidebarItem, Logo },
   created() {
-    console.log(this.permission_routers)
-    this.permission_routers.map((x) => {
-      x.children &&
-        x.children.map((y) => {
-          y.hidden = 0;
-          y.alwaysShow = false;
-        });
-    });
+    
+    // this.permission_routers.map((x) => {
+    //   x.children &&
+    //     x.children.map((y) => {
+    //       y.hidden = 0;
+    //       y.alwaysShow = false;
+    //     });
+    // });
+    // console.log(this.permission_routers)
   },
   computed: {
     ...mapGetters(["permission_routers", "sidebar"]),

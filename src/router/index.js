@@ -55,6 +55,25 @@ router.beforeEach((to, from, next) => {
 
 export const loadMenus = (next, to) => {
   buildMenus().then(res => {
+    res.map( x => {
+      x.alwaysShow = true;
+      x.hidden = 0;
+      x.cache = 0;
+      x.meta = {
+        title: x.name,
+        icon: x.icon
+      };
+      x.children && x.children.map( y => {
+        y.hidden = 0;
+        y.cache = 0;
+        y.alwaysShow = false;
+        y.meta = {
+          title: y.name,
+          icon: y.icon
+        };
+      })
+      console.log(res)
+    })
     const asyncRouter = filterAsyncRouter(res)
     // console.log('hy'+ JSON.stringify(asyncRouter));
     asyncRouter.push({ path: '*', redirect: '/404', hidden: true })
