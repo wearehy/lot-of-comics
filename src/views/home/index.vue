@@ -26,12 +26,12 @@ import { getSystemInfo } from "@/api/system/system";
 export default {
   data() {
     return {
-      xx: 'xxxxxx',
+      xx: 'xx',
       sysinfos: {}
     };
   },
   mounted() {
-    // this.getSystemInfo();
+    this.getSystemInfo();
   },
   destroyed() {
     window.onresize = null;

@@ -59,6 +59,9 @@ export const loadMenus = (next, to) => {
       x.alwaysShow = true;
       x.hidden = 0;
       x.cache = 0;
+      x.componentName = null;
+      x.type = 1;
+      x.children == [] && (x.children = null)
       x.meta = {
         title: x.name,
         icon: x.icon
@@ -67,13 +70,16 @@ export const loadMenus = (next, to) => {
         y.hidden = 0;
         y.cache = 0;
         y.alwaysShow = false;
+        y.componentName = null;
+        y.type = 1;
+        y.children = null;
         y.meta = {
           title: y.name,
           icon: y.icon
         };
       })
-      console.log(res)
     })
+    // console.log(JSON.stringify(res))
     const asyncRouter = filterAsyncRouter(res)
     // console.log('hy'+ JSON.stringify(asyncRouter));
     asyncRouter.push({ path: '*', redirect: '/404', hidden: true })

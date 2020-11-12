@@ -151,7 +151,7 @@ export default {
     }
   },
   mounted(){
-    // this.meunsTableTree()
+    this.meunsTableTree()
   },
   methods: {
     meunsTableTree(){
