@@ -23,7 +23,7 @@ export function menus() {
 
 export function add(data) {
   return request({
-    url: '/menus/add',
+    url: '/admin/sec/permission/add',
     method: 'post',
     data
   })
@@ -31,7 +31,7 @@ export function add(data) {
 
 export function del(ids) {
   return request({
-    url: '/menus/del?id='+ids,
+    url: '/admin/sec/permission/del?id='+ids,
     method: 'delete',
  
   })
@@ -39,7 +39,7 @@ export function del(ids) {
 
 export function edit(data) {
   return request({
-    url: '/menus/edit',
+    url: '/admin/sec/permission/edit',
     method: 'put',
     data
   })
