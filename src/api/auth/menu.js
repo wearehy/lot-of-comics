@@ -9,14 +9,14 @@ export function getMenusTree() {
 
 export function buildMenus() {
   return request({
-    url: '/admin/sec/permission/tree',
+    url: '/admin/sec/permission/user/tree',
     method: 'get'
   })
 }
 
 export function menus() {
   return request({
-    url: '/menus',
+    url: '/admin/sec/permission/tree',
     method: 'get'
   })
 }

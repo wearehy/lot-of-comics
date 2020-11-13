@@ -132,15 +132,17 @@ export default {
   methods: {
     getCode() {
       getCodeImg().then((res) => {
+        
         this.verify = res.verify;
         let codeSrc = `${process.env.VUE_APP_BASE_API}` + "/createVerify";
         let objs = document.getElementById("codeSrc");
         // objs.src = codeSrc;
-        objs.src = "data:image/png;base64," + res.image;
+        objs.src = "data:image/png;base64," + res.imageBase64;
       });
     },
     config() {
       config().then((res) => {
+   
         this.title = res.title;
         this.caseNumber = res.caseNumber;
         this.copyRight = res.copyRight;
@@ -162,17 +164,17 @@ export default {
           this.$store
             .dispatch("Login", user)
             .then((res) => {
-              this.$notify({
-                title: "登录成功",
-                type: "success",
-                duration: 1500,
-              });
+              // this.$notify({
+              //   title: "登录成功",
+              //   type: "success",
+              //   duration: 1500,
+              // });
 
               this.loading = false;
 
               // setTimeout(() => {
                 this.$router.push({ path: "/" });
-                // location.reload();
+                location.reload();
               // }, 5000);
             })
             .catch((e) => {

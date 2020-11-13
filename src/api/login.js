@@ -16,7 +16,7 @@ export function login(username, password, code,verify,rememberMe) {
 
 export function getInfo() {
   return request({
-    url: '/info',
+    url: '/admin/sec/user/info',
     method: 'get'
   })
 }

@@ -134,6 +134,7 @@ export default {
   },
   created() {
     this.form = { id: this.user.id, nickname: this.user.nickname }
+    
     store.dispatch('GetInfo').then(() => {})
   },
   methods: {

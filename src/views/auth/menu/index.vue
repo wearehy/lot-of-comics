@@ -80,7 +80,7 @@
       </div>
     </el-dialog>
     <!--表格渲染-->
-    <el-table ref="table" v-permission="['/menus/tree']" v-loading="loading" :data="tableData" :tree-props="{children: 'children', hasChildren: 'hasChildren'}" row-key="id">
+    <el-table ref="table"  v-loading="loading" :data="tableData" :tree-props="{children: 'children', hasChildren: 'hasChildren'}" row-key="id">
       <el-table-column type="selection" width="55" />
       <el-table-column label="菜单名称" width="180px" prop="name" />
       <el-table-column prop="icon" label="图标" align="center" width="60px">
@@ -156,7 +156,8 @@ export default {
   methods: {
     meunsTableTree(){
       menus().then(res => {
-        this.tableData = res.content
+   
+        this.tableData = res;
         setTimeout(()=>{
           this.loading =false
         },50)

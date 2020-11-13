@@ -31,7 +31,7 @@ export default {
     };
   },
   mounted() {
-    this.getSystemInfo();
+    // this.getSystemInfo();
   },
   destroyed() {
     window.onresize = null;
