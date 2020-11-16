@@ -4,7 +4,7 @@ import qs from 'qs'
 // 获取所有的Role
 export function getAll(params) {
   return request({
-    url: '/roles'+ '?' + qs.stringify(params, { indices: false }),
+    url: '/admin/sec/role/page'+ '?' + qs.stringify(params, { indices: false }),
     method: 'get'
   })
 }

@@ -21,27 +21,28 @@ function calcSign(data, timestamp) { // 获取sign
 export function codelock(config) {
     let method = config.method;
     let url = config.url;
-     data = {};
-
-    if (method == 'post') {
+    var data = {};
+    var timestamp = (new Date()).valueOf().toString(); //时间戳
+    if (method == 'post' || method == 'put') {
         // data = config.data;
         data = ''
     } else {
-        data = ''
-        // if(url.indexOf('?') == -1 ){
-        //     data = ''
-        // }else{
-        //    url.substring(url.indexOf('?') + 1, url.length)
-        //     .split("&")
-        //     .map(value => value.split("="))
-        //     .forEach(value => data[value[0]] = value[1])
-            
-        //     // console.log(data)
-        // }
-      
+        data = '';
+
+        if (url.indexOf('?') != -1) {
+            data = {};
+
+            url.substring(url.indexOf('?') + 1, url.length)
+                .split("&")
+                .map(value => value.split("="))
+                .forEach(value => data[value[0]] = value[1])
+        }
+
+
+
     }
 
-    var timestamp = (new Date()).valueOf().toString(); //时间戳
+
 
     var sign = calcSign(data, timestamp);
 
