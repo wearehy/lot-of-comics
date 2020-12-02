@@ -16,7 +16,7 @@
 <script>
 import Logo from '@/assets/images/logo.png'
 import defaultSettings from '@/settings'
-import { config } from '@/api/system/system'
+import { config } from '@/api/myset/index'
 export default {
   name: 'SidebarLogo',
   props: {

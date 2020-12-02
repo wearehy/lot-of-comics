@@ -42,6 +42,19 @@ ul,li,div,p,span{
 .imgColor{
     color: #AAAAAA;
 }
+.imgW300{
+    width: 300px!important;
+}
+
+.imgWH20{
+    width: 20px!important;
+    height: 20px!important;
+}
+.imgWH24{
+    width: 24px!important;
+    height: 24px!important;
+}
+
 
 /* flex-shrink  用来“吸收”超出的空间 */
 .flex_shrink{
@@ -443,6 +456,9 @@ ul,li,div,p,span{
 }
 .wp100{
     width: 100px!important;
+}
+.wp150{
+    width: 150px!important;
 }
 .wp200{
     width: 200px!important;

@@ -14,18 +14,30 @@ function calcSign(data, timestamp) { // 获取sign
 
     var kvStr = kv.join('');
 
+    kvStr = decodeURIComponent(kvStr);  //get有汉字时解码
+    
     var sign = MD5(kvStr + MD5(timestamp.substring(0, 8)).toString() + timestamp).toString();
     return sign;
 }
 
 export function codelock(config) {
+    
     let method = config.method;
     let url = config.url;
-    var data = {};
+    var data = null;
     var timestamp = (new Date()).valueOf().toString(); //时间戳
+
     if (method == 'post' || method == 'put') {
-        // data = config.data;
-        data = ''
+    
+        if(config.data instanceof FormData){  
+            var  obj = {};
+            config.data.forEach((value,key) => obj[key] = value);
+            delete obj.file
+            data = obj;       
+        }else{
+            data = ''
+        }
+ 
     } else {
         data = '';
 
@@ -37,8 +49,6 @@ export function codelock(config) {
                 .map(value => value.split("="))
                 .forEach(value => data[value[0]] = value[1])
         }
-
-
 
     }
 

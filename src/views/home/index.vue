@@ -22,7 +22,7 @@
 
 <script>
 //引入echarts 插件
-import { getSystemInfo } from "@/api/system/system";
+// import { getSystemInfo } from "@/api/system/system";
 export default {
   data() {
     return {
@@ -37,11 +37,11 @@ export default {
     window.onresize = null;
   },
   methods: {
-    getSystemInfo() {
-      getSystemInfo().then(res => {
-        this.sysinfos = res;
-      });
-    }
+    // getSystemInfo() {
+    //   getSystemInfo().then(res => {
+    //     this.sysinfos = res;
+    //   });
+    // }
   }
 };
 </script>

@@ -10,7 +10,7 @@
             type="primary"
             icon="el-icon-plus"
             @click="handelAdd"
-            :disabled="$permissionButton('/roles/add')"
+            :disabled="$permissionButton('btn:admin:sec:role:add:POST')"
           >
             新增
           </el-button>
@@ -53,7 +53,6 @@
         >
         <el-button
           v-else
-          :disabled="$permissionButton('/admin/menu')"
           type="primary"
           @click="editSubmit"
           >保存</el-button
@@ -82,6 +81,7 @@
             :data="tableData"
             row-key="id"
             @current-change="handleCurrentLineChange"
+            v-permission="['btn:admin:sec:role:page:GET']"
           >
             <el-table-column type="selection" width="55" />
             <el-table-column prop="id" label="ID" />
@@ -104,7 +104,7 @@
             >
               <template slot-scope="scope">
                 <el-button
-                  :disabled="$permissionButton('/roles/edit')"
+                  :disabled="$permissionButton('btn:admin:sec:role:edit:PUT')"
                   size="mini"
                   type="primary"
                   icon="el-icon-edit"
@@ -112,7 +112,7 @@
                 />
                 <el-button
                   :disabled="
-                    scope.row.id === 1 && $permissionButton('/roles/del')
+                    scope.row.id === 1 && $permissionButton('btn:admin:sec:role:DELETE')
                   "
                   size="mini"
                   type="danger"
@@ -150,7 +150,7 @@
               <span class="role-span">菜单分配</span>
             </el-tooltip>
             <el-button
-              :disabled="!showButton"
+              :disabled="!showButton || $permissionButton('btn:admin:sec:role:add:POST')"
               :loading="menuLoading"
               icon="el-icon-check"
               size="mini"
@@ -246,7 +246,6 @@ export default {
         }
         fun(res);
         this.menus = res;
-        console.log(this.menus)
       });
     },
     // 触发单选
@@ -260,7 +259,7 @@ export default {
         this.showButton = true;
         this.menuIds = [];
         // 菜单数据需要特殊处理
-        val.menus.forEach(function (data, index) {
+        val.permissions.forEach(function (data, index) {
           _this.menuIds.push(data.id);
         });
       }
@@ -357,24 +356,24 @@ export default {
     // 保存菜单
     saveMenu() {
       this.menuLoading = true;
-      const role = { id: this.currentId, menus: [] };
+      const role = { id: this.currentId, permissionIds: [] };
       // 得到半选的父节点数据，保存起来
       this.$refs.menu.getHalfCheckedNodes().forEach(function (data, index) {
-        const menu = { id: data.id };
-        role.menus.push(menu);
+        // const menu = { id: data.id };
+        // role.menus.push(menu);
+
+        const menu = data.id;
+        menu && role.permissionIds.push(menu);
       });
       // 得到已选中的 key 值
       this.$refs.menu.getCheckedKeys().forEach(function (data, index) {
-        const menu = { id: data };
-        role.menus.push(menu);
+     
+        const menu = data ;
+        menu && role.permissionIds.push(menu);
       });
 
       editMenu(role).then((res) => {
-        // this.$notify({
-        //   title: "菜单权限分配成功",
-        //   type: "success",
-        //   duration: 1500,
-        // });
+       
         this.menuLoading = false;
       });
     },

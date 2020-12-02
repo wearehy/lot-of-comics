@@ -11,7 +11,7 @@ export function getAll(params) {
 
 export function add(data) {
   return request({
-    url: '/roles/add',
+    url: '/admin/sec/role/add',
     method: 'post',
     data
   })
@@ -27,7 +27,7 @@ export function get(id) {
 
 export function del(ids) {
   return request({
-    url: '/roles/del?id='+ids,
+    url: '/admin/sec/role?id='+ids,
     method: 'delete',
 
   })
@@ -35,7 +35,7 @@ export function del(ids) {
 
 export function edit(data) {
   return request({
-    url: '/roles/edit',
+    url: '/admin/sec/role/edit',
     method: 'put',
     data
   })
@@ -43,7 +43,7 @@ export function edit(data) {
 
 export function editMenu(data) {
   return request({
-    url: '/roles/menu',
+    url: '/admin/sec/role/set/permission',
     method: 'put',
     data
   })

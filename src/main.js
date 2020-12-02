@@ -35,6 +35,11 @@ Router.prototype.push = function push(location) {
   return routerPush.call(this, location).catch(error => error)
 }
 
+// 时间转换
+import moment from 'moment'//导入文件
+Vue.prototype.$moment = moment;//赋值使用
+moment.locale('zh-cn');//需要汉化
+
 import hyUpload from '@/utils/hyUpload.js'
 // 字体图
 import "./assets/fonts/iconfont.css"

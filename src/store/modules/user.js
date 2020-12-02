@@ -30,7 +30,6 @@ const user = {
     Login({ commit }, userInfo) {
       return new Promise((resolve, reject) => {
         login(userInfo.username, userInfo.password, userInfo.code,userInfo.verify,userInfo.rememberMe).then(res => {
-          
           setToken('Bearer '+res.authorization,userInfo.rememberMe)
           commit('SET_TOKEN', 'Bearer '+res.token)
           setUserInfo(res.user, commit)
@@ -76,7 +75,6 @@ const user = {
 
 
 export const setUserInfo = (res, commit) => {
-  console.log(res)
   // 如果没有任何权限，则赋予一个默认的权限，避免请求死循环
   if ( !res.roles || res.roles.length === 0) {
     commit('SET_ROLES', ['ROLE_SYSTEM_DEFAULT'])

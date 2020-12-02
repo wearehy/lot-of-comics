@@ -10,9 +10,8 @@
             type="primary"
             icon="el-icon-plus"
             @click="handelAdd"
+            :disabled="$permissionButton('btn:admin:sec:permission:add:POST')"
           >
-            <!-- :disabled="$permissionButton('/menus/add')"
-          > -->
             新增
           </el-button>
         </el-button-group>
@@ -123,7 +122,11 @@
           label="请求方法"
           prop="method"
         >
-          <el-select v-model="form.method" placeholder="请选择" style="width:178px">
+          <el-select
+            v-model="form.method"
+            placeholder="请选择"
+            style="width: 178px"
+          >
             <el-option
               v-for="item in methods"
               :key="item.value"
@@ -133,11 +136,7 @@
             </el-option>
           </el-select>
         </el-form-item>
-        <el-form-item
-          
-          label="路由地址"
-          prop="path"
-        >
+        <el-form-item label="路由地址" prop="path">
           <el-input
             v-model="form.path"
             placeholder="路由地址"
@@ -176,8 +175,9 @@
             placeholder="匹配组件内Name字段"
           />
         </el-form-item>
+
         <el-form-item
-          v-show="form.type.toString() === '1'"
+          v-if="form.type.toString() !== '2'"
           label="组件路径"
           prop="component"
         >
@@ -209,6 +209,7 @@
       :data="tableData"
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
       row-key="id"
+      v-permission="['btn:admin:sec:permission:tree:GET']"
     >
       <el-table-column type="selection" width="55" />
       <el-table-column label="菜单名称" width="180px" prop="name" />
@@ -246,8 +247,9 @@
             type="primary"
             icon="el-icon-edit"
             @click="handelEdit(scope.row)"
+            :disabled="$permissionButton('btn:admin:sec:permission:edit:PUT')"
           />
-          <!-- :disabled="$permissionButton('/menus/edit')" /> -->
+
           <el-button
             size="mini"
             type="danger"
@@ -255,7 +257,6 @@
             @click="handelDel(scope.row)"
             :disabled="$permissionButton('btn:admin:sec:permission:del:DELETE')"
           />
-          <!-- :disabled="$permissionButton('/menus/del')"  /> -->
         </template>
       </el-table-column>
     </el-table>
@@ -267,7 +268,7 @@ import { menus, getMenusTree, add, edit, del } from "@/api/auth/menu";
 import IconSelect from "@/components/IconSelect";
 import Treeselect from "@riophae/vue-treeselect";
 import "@riophae/vue-treeselect/dist/vue-treeselect.css";
-import store from '@/store'
+import store from "@/store";
 
 const defaultForm = {
   id: "",
@@ -298,19 +299,21 @@ export default {
       form: defaultForm,
       selectList: null,
       methods: [
-        {label:'POST',value:'POST'},
-        {label:'PUT',value:'PUT'},
-        {label:'GET',value:'GET'},
-        {label:'DELETE',value:'DELETE'}
+        { label: "POST", value: "POST" },
+        { label: "PUT", value: "PUT" },
+        { label: "GET", value: "GET" },
+        { label: "DELETE", value: "DELETE" },
       ],
       rules: {
         name: [{ required: true, message: "请输入名称", trigger: "blur" }],
         path: [{ required: true, message: "请输入地址", trigger: "blur" }],
+        component: [
+          { required: true, message: "请输入组件路径", trigger: "blur" },
+        ],
       },
     };
   },
   mounted() {
-    console.log(222,store.getters.roles)
     this.meunsTableTree();
   },
   methods: {
@@ -381,9 +384,13 @@ export default {
     addSubmit() {
       this.$refs["form"].validate((valid) => {
         if (valid) {
-          this.form.type == 2 ? (this.form.permission = 'btn' + (this.form.path.replace(/\//g,':') + ':' + this.form.method)) : (this.form.permission = 'page' + (this.form.path.replace(/\//g,':')));
+          this.form.type == 2
+            ? (this.form.permission =
+                "btn" +
+                (this.form.path.replace(/\//g, ":") + ":" + this.form.method))
+            : (this.form.permission =
+                "page" + this.form.path.replace(/\//g, ":"));
           add(this.form).then((res) => {
-           
             this.$refs["form"].resetFields();
             this.meunsTableTree();
             this.dialog = false;
@@ -398,10 +405,14 @@ export default {
     editSubmit() {
       this.$refs["form"].validate((valid) => {
         if (valid) {
-          this.form.type == 2 ? (this.form.permission = 'btn' + (this.form.path.replace(/\//g,':') + ':' + this.form.method)) : (this.form.permission = 'page' + (this.form.path.replace(/\//g,':')));
-          
+          this.form.type == 2
+            ? (this.form.permission =
+                "btn" +
+                (this.form.path.replace(/\//g, ":") + ":" + this.form.method))
+            : (this.form.permission =
+                "page" + this.form.path.replace(/\//g, ":"));
+
           edit(this.form).then((res) => {
-            
             this.$refs["form"].resetFields();
             this.meunsTableTree();
             this.dialog = false;
@@ -420,7 +431,6 @@ export default {
         type: "error",
       }).then(() => {
         del(row.id).then((res) => {
-         
           this.meunsTableTree();
         });
       });

@@ -29,7 +29,6 @@
   <div class="footerBtn" v-if="share">
     <img v-if="attach.laterUrl" style="width:200px;height:200px" />
     <el-button @click="dialogVisible=true" :size="btn.size" type="primary">{{btn.name}}</el-button>
-
     <!-- 弹出层-裁剪 -->
     <el-dialog
       title="编辑图片"
@@ -262,7 +261,7 @@ export default {
       },
     },
   },
-  props: ["share"],
+  props: ["share","differ"],
   methods: {
     //控制弹出层关闭
     handleClose() {
@@ -307,22 +306,21 @@ export default {
       this.$refs.cropper.getCropBlob((res) => {
         //res是裁剪后图片的bolb对象
         formData.append("file", res);
+        formData.append("type",this.share.type)
         // console.log('裁剪',formData);
         var list = {
           formData: formData,
           url: this.previews.url,
         };
-
-        // if (res.size < 2000000) {
-        //   this.$emit("feedback", list);
-        //   this.$message.success("获取图片成功");
-        // } else {
-        //   this.$message.error("图片不得大于2MB");
-        // }
+     
+        if(this.differ){
+          list.differ = this.differ
+        }
+        this.num && (list.num = this.num);
 
         if (res.size < 204800) {
           this.$emit("feedback", list);
-          this.$message.success("获取图片成功");
+          // this.$message.success("获取图片成功");
         } else {
           this.$message.error("图片不得大于2MB");
         }

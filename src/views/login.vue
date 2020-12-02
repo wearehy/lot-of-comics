@@ -86,7 +86,7 @@
 
 <script>
 import Config from "@/settings";
-import { config } from "@/api/system/system";
+import { config } from "@/api/myset/index";
 import { getCodeImg } from "@/api/login";
 export default {
   name: "Login",
@@ -132,7 +132,6 @@ export default {
   methods: {
     getCode() {
       getCodeImg().then((res) => {
-        
         this.verify = res.verify;
         let codeSrc = `${process.env.VUE_APP_BASE_API}` + "/createVerify";
         let objs = document.getElementById("codeSrc");
@@ -142,7 +141,6 @@ export default {
     },
     config() {
       config().then((res) => {
-   
         this.title = res.title;
         this.caseNumber = res.caseNumber;
         this.copyRight = res.copyRight;
@@ -173,8 +171,8 @@ export default {
               this.loading = false;
 
               // setTimeout(() => {
-                this.$router.push({ path: "/" });
-                location.reload();
+              this.$router.push({ path: "/" });
+              // location.reload();
               // }, 5000);
             })
             .catch((e) => {

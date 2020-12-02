@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { config } from '@/api/system/system'
+import { config } from '@/api/myset/index'
 export default {
   name: 'AppMain',
   data(){
