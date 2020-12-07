@@ -12,13 +12,13 @@ NProgress.configure({ showSpinner: false })// NProgress Configuration
 const whiteList = ['/login']// no redirect whitelist
 
 router.beforeEach((to, from, next) => {
+  
   if (to.meta.title) {
     document.title = to.meta.title + ' - ' + Config.title
   }
   NProgress.start()
- 
   if (getToken()) {
-    console.log(22)
+
     // 已登录且要跳转的页面是登录页
     if (to.path === '/login') {
       next({ path: '/' })
